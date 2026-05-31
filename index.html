@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veuve Clicquot Racing</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">PORSCHE</div>
+    <ul class="nav-links">
+      <li><a href="#">Models</a></li>
+      <li><a href="#">Experience</a></li>
+      <li><a href="#">Mobility</a></li>
+      <li><a href="#" class="active">Design</a></li>
+      <li><a href="#">Discover</a></li>
+      <li><a href="#">Innovation</a></li>
+    </ul>
+    <div class="nav-icons">
+      <span class="icon-search">🔍</span>
+      <span class="icon-menu">☰</span>
+    </div>
+  </nav>
+
+  <main>
+    <!-- 1. Hero Video Scroll Section -->
+    <section class="hero-video-section" id="hero-section">
+      <div class="video-container">
+        <!-- Canvas target for dynamic 181 frame image scrubbing sequence -->
+        <canvas id="hero-canvas"></canvas>
+      </div>
+    </section>
+
+    <!-- 2. Engine Interactivity Section -->
+    <section class="engine-section" id="engine-section">
+      <!-- Added Background Video Loop -->
+      <video class="engine-bg-video" autoplay loop muted playsinline preload="auto">
+        <source src="assets/default_1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+        <!-- Power button for inflation animation & audio -->
+        <button class="power-button" id="power-btn" aria-label="Start Engine">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18.36 6.64a9 9 0 1 1-12.73 0M12 2v10"></path>
+          </svg>
+        </button>
+        <!-- Audio element for engine sound -->
+        <audio id="engine-audio" src="assets/What does the Porsche 963 bump start sound like in RENNSPORT_.mp3"
+          preload="auto"></audio>
+        <div class="powertrain-text">power train</div>
+      </div>
+    </section>
+
+    <!-- 3. Text Section: Paradox Quote -->
+    <section class="quote-section">
+      <div class="quote-content">
+        <div class="divider-line"></div>
+        <p class="large-quote">
+          Endurance is a paradox of tension and stillness. For Porsche at<br>
+          Le Mans, victory is not merely a mathematical certainty of<br>
+          speed, but a release of collective pressure. It's a ritual defined<br>
+          by the amber glow of the podium and the crisp effervescence<br>
+          of the bottle—a moment where engineering precision meets<br>
+          human celebration.
+        </p>
+        <p class="quote-author">BY MATIAS CRENSHAW / PHOTOS BY LE TEAM</p>
+      </div>
+    </section>
+
+    <!-- 4. What is Veuve Clicquot Section -->
+    <section class="veuve-section">
+      <div class="veuve-container">
+        <div class="veuve-image-col">
+          <img src="assets/image_30.png" alt="Veuve Clicquot Collage">
+        </div>
+        <div class="veuve-text-col">
+          <span class="tag">TRADITION</span>
+          <h2>What is Veuve Clicquot?</h2>
+          <p>
+            Veuve Clicquot stands not only for champagne but as a cultural entity
+            spanning generations. The brand is intertwined with endurance, pushing
+            boundaries and championing modern artistry. For racers at prestigious
+            events like 24h Le Mans, spraying the vibrant bottle is the ultimate
+            crescendo, representing not just a win, but historical lineage. It echoes
+            tradition, luxury, and the beauty of resilience across decades of World
+            Heritage and relentless competition.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. The Palette Section -->
+    <section class="palette-section">
+      <div class="palette-container">
+        <div class="palette-text-col">
+          <span class="tag">CRAFTSMANSHIP</span>
+          <h2>The Palette</h2>
+          <p>
+            The signature Clicquot Yellow creates an unmistakable identity,
+            complementing the iconic Porsche crest. The design language speaks to a
+            precise aesthetic choice: warm hues, metallic sheen, and raw engineering
+            forms merging into visual excellence. The interplay showcases the perfect
+            contrast between historic elegance and raw motorsport typography on the asphalt.
+          </p>
+        </div>
+        <div class="palette-image-col">
+          <img src="assets/image_24.png" alt="Palette Swatches">
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Spotlight on 963 / Carousel Section -->
+    <section class="spotlight-outer" id="spotlight-outer">
+      <div class="spotlight-sticky">
+        <div class="spotlight-header" id="spotlight-header">
+          <h2>Spotlight on 963</h2>
+        </div>
+
+        <div class="horizontal-scroll-wrapper">
+          <!-- Ensure IDs match the JS exactly -->
+          <div class="carousel-track" id="horizontal-track">
+            <div class="carousel-slide"><img src="assets/image_33.png" alt="963 Front"></div>
+            <div class="carousel-slide"><img src="assets/image_36.png" alt="963 Side"></div>
+            <div class="carousel-slide"><img src="assets/image_2.png" alt="963 Detail"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <div class="footer-logo">PORSCHE</div>
+      <div class="footer-links">
+        <a href="#">LEGAL NOTICE</a>
+        <a href="#">PRIVACY POLICY</a>
+        <a href="#">COOKIES</a>
+        <a href="#">CONSUMPTION EMISSIONS</a>
+        <a href="#">OPEN SOURCE SOFTWARE NOTICE</a>
+      </div>
+    </div>
+    <div class="footer-copy">&copy; 2024 DR. ING. H.C. F. PORSCHE AG.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
